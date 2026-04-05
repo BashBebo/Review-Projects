@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main>
-        <input type="text" placeholder="task name" id="type_task">
-        <button id="add_button">Add</button>
-        <p id="validation_text"></p>
-         <h1>Task List</h1>
-        <div id="task_list">
+        <div class="header">
+           <h1>Task List</h1>
+           <span>
+           <input type="text" placeholder="Add a new task" id="type_task">
+           <button id="add_button">Add</button>
+           <p id="validation_text"></p>
+           </span>
+        </div>
+        <div id="task_list" class="task_List">
            <ul id="odl" type="">
            </ul>
         </div>

@@ -14,7 +14,8 @@ AddTask.addEventListener("click", function () {
       ValidationText.textContent = "";
       let TaskItem = document.createElement("p");
       TaskItem.textContent = InputValue;
-      OrderList.appendChild(TaskItem);
+      TaskList.appendChild(TaskItem);
       console.log(TaskItem);
     }
 })
+

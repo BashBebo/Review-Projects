@@ -13,8 +13,11 @@ AddTask.addEventListener("click", function () {
       InputTask.value = "";
       ValidationText.textContent = "";
       let TaskItem = document.createElement("li");
+      let DelBtn = document.createElement("button");
       TaskItem.textContent = InputValue;
+      DelBtn.textContent = "Delete";
       TaskItem.classList.add("task_item");
+      TaskItem.appendChild(DelBtn);
       OrderList.appendChild(TaskItem);
       console.log(TaskItem);
     }

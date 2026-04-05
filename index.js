@@ -12,9 +12,10 @@ AddTask.addEventListener("click", function () {
     } else {
       InputTask.value = "";
       ValidationText.textContent = "";
-      let TaskItem = document.createElement("p");
+      let TaskItem = document.createElement("li");
       TaskItem.textContent = InputValue;
-      TaskList.appendChild(TaskItem);
+      TaskItem.classList.add("task_item");
+      OrderList.appendChild(TaskItem);
       console.log(TaskItem);
     }
 })

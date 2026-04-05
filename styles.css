@@ -53,3 +53,15 @@ main  {
     flex-direction: column;
     align-items: center;
 }
+
+.odl .task_item {
+    list-style-type: none;
+    padding: 0;
+    flex-direction: column;
+    column-gap: 100px;
+    width: 100px;
+    display: flex;
+    position: relative;
+    margin-right: 146px;
+    
+}

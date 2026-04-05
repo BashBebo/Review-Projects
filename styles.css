@@ -47,22 +47,17 @@ main  {
     border-style: solid;
 }
 
-.task_List {
+.task_list {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 20px;
-
+    position: relative;
+    margin-left: 10000px;
 }
 
-/* .task_item { */
-    list-style-type: none;
-    flex-direction: column;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    max-width: 400px;    
-    word-wrap:normal;
-    position: relative;
+.task_item { 
+    list-style: none;
     margin-right: 146px;;
 }

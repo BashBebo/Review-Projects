@@ -12,14 +12,22 @@ AddTask.addEventListener("click", function () {
     } else {
       InputTask.value = "";
       ValidationText.textContent = "";
-      let TaskItem = document.createElement("li");
       let DelBtn = document.createElement("button");
-      TaskItem.textContent = InputValue;
+      let TaskItem = document.createElement("li");
+      let CheckBox = document.createElement("input");
+      CheckBox.type = "checkbox";
       DelBtn.textContent = "Delete";
+      DelBtn.addEventListener("click", function() {
+        OrderList.removeChild(TaskItem);
+      });   
+                        
+      TaskItem.textContent = InputValue;
+      TaskItem.appendChild(CheckBox);
+      DelBtn.classList.add("delbtn");
       TaskItem.classList.add("task_item");
       TaskItem.appendChild(DelBtn);
       OrderList.appendChild(TaskItem);
-      console.log(TaskItem);
+      console.log(TaskItem);    
     }
 })
 

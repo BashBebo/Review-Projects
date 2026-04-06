@@ -61,3 +61,26 @@ main  {
     list-style: none;
     margin-right: 146px;;
 }
+
+#Done {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    list-style: none;
+
+}
+
+#Not_Done { 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    list-style: none;
+}
+
+#Done :active {
+    visibility: visible;
+}

@@ -5,10 +5,28 @@ let TaskList = document.getElementById("task_list");
 let OrderList = document.getElementById("odl");
 let filterbuttons = document.querySelectorAll(".filter button");
 let Allbtn = document.getElementById("all");
-let uncompletedbtn = document.getElementById("uncompleted");
+let uncompletedbtn = document.getElementById("NotCompleted");
 let completedbtn = document.getElementById("completed");
 let _Done = document.getElementById("Done");
 let _Undone = document.getElementById("Not_Done");
+
+  // Initial state: All visible
+  _Done.style.display = "flex";
+  _Undone.style.display = "flex";
+
+  // Filter event listeners
+  Allbtn.addEventListener("click", function () {
+    _Done.style.display = "flex";
+    _Undone.style.display = "flex";
+  });
+  uncompletedbtn.addEventListener("click", function () {
+    _Undone.style.display = "flex";
+    _Done.style.display = "none";
+  });
+  completedbtn.addEventListener("click", function () {
+    _Undone.style.display = "none";
+    _Done.style.display = "flex";
+  });
 
 AddTask.addEventListener("click", function () {
     let InputValue = InputTask.value
@@ -41,7 +59,7 @@ AddTask.addEventListener("click", function () {
       DelBtn.classList.add("delbtn");
       TaskItem.classList.add("task_item");
       TaskItem.appendChild(DelBtn);
-      Not_Done.appendChild(TaskItem);
+      _Undone.appendChild(TaskItem);
       console.log(TaskItem);    
     }
 });
